@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+</head>
+
+<body>
+    <div class="global-stars"></div>
+    <div class="scene">
+        <section class="section slide1">
+            <div class="uranus el lax" data-lax-translate-x="0 0, vh 865"><img src="images/section1-uranus.svg" alt=""></div>
+            <div class="mars el lax" data-lax-translate-x="0 0, vh -865"><img src="images/section1-mars.svg" alt=""></div>
+
+            <!-- <div class="designer el">
+                <div class="lax" data-lax-translate-y="0 0, vh (document.body.scrollHeight*0.2)" data-lax-opacity="0 1, vh 0">
+                    <img src="images/section1-designer.svg" alt="">
+                </div>
+            </div> -->
+            <!-- <div class="developer el">
+                    <div class="lax" data-lax-translate-y="0 0, vh (document.body.scrollHeight*0.2)" data-lax-opacity="0 1, vh 0">
+                        <img src="images/section1-developer.svg" alt="">
+                    </div>
+                </div> -->
+
+            <div class="designer el">
+                <div class="lax" data-lax-translate-x="0 0, vh -1000 | speed=0.5">
+                    <img src="images/section1-designer.svg" alt="">
+                </div>
+            </div>
+
+            <div class="developer el">
+                <div class="lax" data-lax-translate-x="0 0, vh 1000 | speed=0.5">
+                    <img src="images/section1-developer.svg" alt="">
+                </div>
+            </div>
+            
+            <div class="poop el">
+                <div class="lax" data-lax-preset="zoomOut">
+                    <img src="images/section1-poop.svg" alt="">
+                </div>
+            </div>
+            <div class="text el lax"  data-lax-preset="zoomOut">
+                Designers are from Mars<br>Developers are from Uranus
+            </div>
+         
+                    
+        </section>
+    
+        <section class="section slide2">
+            <div class="designer el">
+                <div class="lax" data-lax-translate-x="0 -1000, vh 0 | offset=700 speed=0.5"><img src="images/section2-designer.svg" alt=""></div>
+            </div>
+
+            <div class="developer el">
+                <div class="lax" data-lax-translate-x="0 1000, vh 0 | offset=700 speed=0.5"><img src="images/section2-developer.svg" alt=""></div>
+            </div>
+
+            <div class="bg-left el lax" data-lax-translate-x="0 -1000, vh 0"></div>
+
+            <div class="bg-right el lax" data-lax-translate-x="0 1000, vh 0"></div>
+
+            <div class="text el lax"  data-lax-preset="zoomIn">
+                Outsourcing web development<br>can be an intergalactic P.I.T.A.
+            </div>
+
+        </section>
+
+
+        <div class="section slide3">
+            <!-- <div class="stars el" id="stars"><img src="images/bg-stars.svg" alt=""></div> -->
+            <div class="spaceship-outer el"><div class="spaceship lax" data-lax-preset="zoomOut"><div class="spaceship-wrap"><img src="images/section3-spaceship.svg" alt="" class="editable"></div></div></div>
+            <div class="spot el lax"  data-lax-preset="fadeIn"><img src="images/section3-spot.svg" alt=""></div>
+            <div class="text el lax" data-lax-preset="zoomIn">
+                We searched the universe for the answers...<br>
+                And here's what we've discovered:
+            </div>
+            <div class="option-left el lax" data-lax-translate-x="0 -1000, vh 0 | offset=-800">
+                <div class="option-inner">
+                    <span class="option-content">Take the scenic route</span><span class="option-lines"></span>
+                </div>
+            </div>
+            <div class="option-right el lax" data-lax-translate-x="0 1000, vh 0 | offset=-800">
+                <div class="option-inner">
+                    <span class="option-content">Engage warp speed</span><span class="option-lines"></span>
+                </div>
+            </div>
+           
+        </div>
+
+
+        <div class="section slide4">
+            <div class="bg el"></div>
+            <div class="el tablet" id="tablet">
+               <div class="tablet-content">
+                    <img src="images/tablet.svg" alt="" class="tablet-screen">
+                    <img src="images/tablet-thumbs.svg" alt="" class="tablet-thumbs">
+                    <div class="tablet-slides">
+                        <div class="tablet-slides-inner">
+                                <div class="tablet-slide tablet-slide1"><img src="images/tablet-slide1.svg" alt=""></div>
+                                <div class="tablet-slide tablet-slide2"><img src="images/tablet-slide2.svg" alt=""></div>
+                                <div class="tablet-slide tablet-slide3"><img src="images/tablet-slide3.svg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="el problem">
+                <div class="tag">PROBLEM</div>
+                <div class="title">DEVELOPERS LACK ATTENTION TO DETAIL</div>
+            </div>
+           
+        </div>
+
+        <div class="section slide5">
+            <div class="bg el"></div>
+            <div class="el solution">
+                <div class="tag">SOLUTION</div>
+                <div class="title">UNLIMITED FRONT-END REVISIONS</div>
+            </div>
+        </div>
+
+
+        <div class="section slide6" id="stopTablet" >
+            <div class="bg el"></div>
+            <div class="el solution">
+                <div class="tag">SOLUTION</div>
+                <div class="title">UNLIMITED FRONT-END REVISIONS</div>
+            </div>
+        </div>
+
+                 
+        <div class="section slide7">
+     
+            <div class="el problem lax" data-lax-translate-x="0 0, 10 -500 | offset=-500" data-lax-anchor="self">
+                <div class="tag">PROBLEM</div>
+                <div class="title">DEVELOPERS<br>GO DARK</div>
+            </div>
+
+            <div class="el sun">
+                <div class="lax" data-lax-translate-y="0 0, 10 500 | offset=-500 speed=0.5" data-lax-anchor="self">
+                    <img src="images/slide7-blackout.svg" alt="">
+                </div>
+            </div>
+        </div>
+    
+      
+       
+    </div>
+    
+</body>
+
+
+<script src="js/lottie.min.js"></script>
+<script src="js/lax.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/main.js"></script>
+ 
+<!-- <script>
+lottie.loadAnimation({
+  container: document.getElementById('stars'), // the dom element that will contain the animation
+  renderer: 'html',
+  loop: true,
+  autoplay: true,
+  path: 'data.json' // the path to the animation json
+});
+</script> -->
+
+</html>
