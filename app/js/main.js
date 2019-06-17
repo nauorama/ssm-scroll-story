@@ -124,3 +124,82 @@ $('.slide6').waypoint({
     offset: '20%'
 });
 
+
+$('.slide8').waypoint({
+    handler: function(direction) {
+        if (direction === 'down') {
+            $('.slide8').addClass('in');
+        } else if (direction === 'up') {
+            $('.slide8').removeClass('in');
+        }
+    }
+});
+
+
+$('.slide8').waypoint({
+    handler: function(direction) {
+        if (direction === 'down') {
+            $('.slide8').addClass('end');
+        } else if (direction === 'up') {
+            $('.slide8').removeClass('end');
+        }
+    },
+    offset: 'bottom-in-view'
+});
+
+$('.slide9').waypoint({
+    handler: function(direction) {
+        if (direction === 'down') {
+            $('.slide9').addClass('in');
+            $('.slide8').removeClass('in');
+        } else if (direction === 'up') {
+            $('.slide9').removeClass('in');
+            $('.slide8').addClass('in');
+        }
+    }
+});
+
+var $animation_elements = $('.slide9');
+var $window = $(window);
+var lastPos = 0;
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+
+    //check to see if this current container is within viewport
+    console.log(window_top_position + ' ' + element_bottom_position)
+    if ((window_top_position >= element_top_position) && (window_top_position < element_bottom_position)) {
+        lastPos = lastPos + 6;
+      $('.ufo2-trash1,.ufo2-trash2, .ufo2-trash3,.ufo2-trash4,.ufo2-trash5').css('transform', 'translate3d(0,-' + lastPos + 'px,0)');
+  console.log('+')
+    } else {
+        lastPos = 0;
+        console.log('-')
+        $('.ufo2-trash1,.ufo2-trash2, .ufo2-trash3,.ufo2-trash4,.ufo2-trash5').css('transform', 'translate3d(0,0,0)');
+    }
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+
+$('.slide10').waypoint({
+    handler: function(direction) {
+        if (direction === 'down') {
+            $('.slide10').addClass('in');
+            $('.slide9').removeClass('in');
+        } else if (direction === 'up') {
+            $('.slide10').removeClass('in');
+            $('.slide9').addClass('in');
+        }
+    }
+});
