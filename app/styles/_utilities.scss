@@ -1,38 +1,121 @@
-.ein-color-orange {
-    color: $orange !important;
+@keyframes moverSpaceship2 {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(5px);
+        transform: translateY(5px);
+    }
 }
 
-.ein-color-green {
-    color: $green !important;
+@keyframes moverSpaceship2 {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
 }
 
-.ein-pull-bottom {
-    margin-bottom: 0 !important;
+@keyframes engine {
+    0% {
+        fill: #FFFDAB;
+    }
+
+    100% {
+        fill: #ffa62b;
+    }
 }
 
-.text-center {
-    text-align: center !important;
+
+@keyframes spacehipMove {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    20% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+
+    80% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
 }
 
-.ein-list {
-    list-style-type: none;
-    margin: 30px 0;
-    padding: 0;
+@keyframes mover {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
 
-    li {
-        position: relative;
-        padding-left: 25px;
+    100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
 
-        &:before {
-            content: '';
-            display: block;
-            background: url(images/checkmark.svg) no-repeat;
-            background-size: contain;
-            width: 15px;
-            height: 12px;
-            position: absolute;
-            top: 10px;
-            left: 0;
-        }
+
+@keyframes mover2 {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+}
+
+@keyframes poopMover {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    100% {
+        -webkit-transform: translateY(3px);
+        transform: translateY(3px);
+    }
+}
+
+@keyframes eyeMove {
+
+    0%,
+    40% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    60%,
+    100% {
+        -webkit-transform: translateX(-11px);
+        transform: translateX(-11px);
+    }
+}
+
+@keyframes spin {
+
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }

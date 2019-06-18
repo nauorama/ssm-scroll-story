@@ -97,109 +97,6 @@ body {
     }
 }
 
-@-webkit-keyframes mover {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes mover {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(-10px);
-        transform: translateY(-10px);
-    }
-}
-
-@-webkit-keyframes mover2 {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px);
-    }
-}
-
-@keyframes mover2 {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(10px);
-        transform: translateY(10px);
-    }
-}
-
-
-@-webkit-keyframes poopMover {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(3px);
-        transform: translateY(3px);
-    }
-}
-
-@keyframes poopMover {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(3px);
-        transform: translateY(3px);
-    }
-}
-
-@-webkit-keyframes eyeMove {
-
-    0%,
-    40% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-    }
-
-    60%,
-    100% {
-        -webkit-transform: translateX(-11px);
-        transform: translateX(-11px);
-    }
-}
-
-@keyframes eyeMove {
-
-    0%,
-    40% {
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
-    }
-
-    60%,
-    100% {
-        -webkit-transform: translateX(-11px);
-        transform: translateX(-11px);
-    }
-}
-
 
 .slide2 {
 
@@ -261,7 +158,6 @@ body {
 .slide3 {
     overflow: hidden;
 
-    .spaceship {}
 
     .spaceship-outer {
         max-width: 434px;
@@ -301,32 +197,6 @@ body {
         animation: spin 240s linear infinite;
     }
 
-    @-webkit-keyframes spin {
-
-        from {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-
-        to {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes spin {
-
-        from {
-            -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-        }
-
-        to {
-            -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-        }
-    }
-
     .text {
         font-weight: 500;
         font-size: 24px;
@@ -342,78 +212,16 @@ body {
     }
 
     .spaceship-engine {
-        -webkit-animation: engine 2s infinite alternate ease-in-out;
         animation: engine 2s infinite alternate ease-in-out;
     }
 
-    @-webkit-keyframes engine {
-        0% {
-            fill: #FFFDAB;
-        }
 
-        100% {
-            fill: #ffa62b;
-        }
-    }
-
-    @keyframes engine {
-        0% {
-            fill: #FFFDAB;
-        }
-
-        100% {
-            fill: #ffa62b;
-        }
-    }
 
     .spaceship-wrap {
-        -webkit-animation: spacehipMove 6s infinite alternate ease-in-out;
         animation: spacehipMove 6s infinite alternate ease-in-out;
     }
 
-    @-webkit-keyframes spacehipMove {
-        0% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0)
-        }
 
-        20% {
-            -webkit-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
-
-        80% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0)
-        }
-
-        100% {
-            -webkit-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
-    }
-
-    @keyframes spacehipMove {
-        0% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0)
-        }
-
-        20% {
-            -webkit-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
-
-        80% {
-            -webkit-transform: translateY(0);
-            transform: translateY(0)
-        }
-
-        100% {
-            -webkit-transform: translateY(-10px);
-            transform: translateY(-10px)
-        }
-    }
 
     .option-content {
         color: white;
@@ -1054,7 +862,7 @@ body {
 
 .slide10 {
     background: #667682;
-    height: 200vh;
+    height: 100vh;
 
     .bg {
         opacity: 0;
@@ -1166,24 +974,58 @@ body {
     }
 
     .ufo {
-        //position: fixed;
         width: 100%;
-        bottom: 2%;
+        bottom: -190px;
         z-index: 2;
         max-width: 210px;
-        left: 14%;
+        left: 50%;
+        margin-left: -540px;
+    }
 
+    .small-planet1,
+    .small-planet2,
+    .small-planet3 {
+        z-index: 1;
+        position: fixed;
+        opacity: 0;
+        border-radius: 50%;
+        transition: opacity 0.6s;
+    }
+
+    .small-planet1 {
+        background: #ffe8be;
+        width: 100px;
+        height: 100px;
+        bottom: 20%;
+        left: 15%;
+    }
+
+    .small-planet2 {
+        background: #efdfe4;
+        width: 195px;
+        height: 195px;
+        left: 30%;
+        top: -40px;
+    }
+
+    .small-planet3 {
+        background: #f6e9d6;
+        width: 270px;
+        height: 270px;
+        right: 5%;
+        bottom: 5%;
     }
 
     &.in {
 
-        .clouds {
-            opacity: 1;
-        }
-
+        .small-planet1,
+        .small-planet2,
+        .small-planet3,
+        .clouds,
         .bg {
             opacity: 1;
         }
+
 
         .solution {
             -webkit-transform: translateX(0px);
@@ -1199,6 +1041,10 @@ body {
                 }
 
             }
+        }
+
+        .ufo {
+            position: fixed;
         }
 
         .s10part1,
@@ -1222,59 +1068,123 @@ body {
     }
 }
 
+.slide11 {
+    background: #c1dff4;
 
-
-
-@-webkit-keyframes moverSpaceship {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+    .bg {
+        opacity: 0;
+        -webkit-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+        background: #ccb9da;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
 
-    100% {
-        -webkit-transform: translateY(5px);
-        transform: translateY(5px);
-    }
-}
-
-
-
-
-@-webkit-keyframes moverSpaceship2 {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+    .problem {
+        position: fixed;
+        -webkit-transform: none;
+        -webkit-transform: none;
+        transform: none;
+        -webkit-transition: -webkit-transform 0.6s;
+        transition: -webkit-transform 0.6s;
+        transition: transform 0.6s;
+        transition: transform 0.6s, -webkit-transform 0.6s;
+        -webkit-transform: translateX(-450px);
+        transform: translateX(-450px);
     }
 
-    100% {
-        -webkit-transform: translateY(5px);
-        transform: translateY(5px);
-    }
-}
-
-
-
-
-@keyframes moverSpaceship2 {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+    .spot {
+        width: 100%;
+        position: fixed;
+        top: 50%;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.6s;
+        max-width: 1250px;
     }
 
-    100% {
-        -webkit-transform: translateY(5px);
-        transform: translateY(5px);
-    }
-}
+    .spaceship-outer {
+        position: fixed;
+        top: 53%;
+        left: 50%;
+        width: 100%;
+        max-width: 450px;
+        z-index: 1;
+        transform: translate(-50%, -50%);
 
-@keyframes moverSpaceship2 {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
+        .spaceship {
+            transition: transform 0.6s;
+            transform: scale(0);
+
+            >div {
+                animation: spacehipMove 6s infinite alternate ease-in-out;
+            }
+        }
+
+        .spaceship-engine {
+            animation: engine 2s infinite alternate ease-in-out;
+        }
     }
 
-    100% {
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px);
+    .stone {
+        background: url(images/section11-stone.svg) no-repeat;
+        background-size: contain;
+
+        z-index: 2;
+        position: fixed;
+
+        &.stone1 {
+            width: 280px;
+            height: 280px;
+            top: -10%;
+            left: 84%;
+            transform: rotateZ(-2deg);
+        }
+
+        &.stone2 {
+            width: 200px;
+            height: 200px;
+            top: 16%;
+            left: 68%;
+            transform: rotateZ(30deg);
+        }
+
+        &.stone3 {
+            width: 60px;
+            height: 60px;
+            top: 36%;
+            left: 57%;
+            transform: rotateZ(-90deg);
+        }
     }
+
+    &.in {
+
+        .bg {
+            opacity: 1;
+        }
+
+        .problem {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        .spot {
+            opacity: 1;
+        }
+
+        .spaceship-outer {
+            .spaceship {
+                transform: scale(1);
+
+
+            }
+        }
+
+    }
+
 }
